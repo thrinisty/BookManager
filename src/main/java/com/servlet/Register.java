@@ -17,7 +17,6 @@ public class Register extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         System.out.println(username + " " + password);
-        //待定，这里需要添加使用Bean对象将对象写入数据库的功能
 
         UserDao userDao = new UserDao();
         String sql = "insert into user values(?, ?)";
