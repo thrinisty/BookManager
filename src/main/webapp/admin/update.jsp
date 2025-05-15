@@ -76,7 +76,7 @@
     <form action="../update" method="get">
         <div class="form-group">
             <label for="title">书本id:</label>
-            <input type="text" id="id" name="id" value="${book.id}" required>
+            <input type="text" id="id" name="id" value="${param.id}" required>
         </div>
         <div class="form-group">
             <label for="title">书名:</label>
