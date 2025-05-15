@@ -4,14 +4,19 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
-        int id = 2;
-        String name = "Book2";
-        String author = "Thrinisty";
-        double price = 311.0;
-
         BookDao bookDao = new BookDao();
-        String sql = "insert into book values(?,?,?,?)";
-        int update = bookDao.update(sql, id, name, author, price);
+        int id = 4;
+        String sql = "delete from book where id = ?";
+        int update = bookDao.update(sql, id);
+        System.out.println(update);
+
+        id = 3;
+        String name = "another";
+        String author = "another";
+        double price = 3.5;
+
+        sql = "update book set `title` = ?, `author` = ?, `price` = ? where `id` = ?";
+        update = bookDao.update(sql, name, author, price, id);
         System.out.println(update);
     }
 }

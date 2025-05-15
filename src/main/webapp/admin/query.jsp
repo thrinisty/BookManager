@@ -59,6 +59,17 @@
             text-align: center;
             margin: 20px 0;
         }
+        .action-link {
+            color: #0066cc;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        .action-link:hover {
+            text-decoration: underline;
+        }
+        .action-cell {
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -83,6 +94,7 @@
                     <th>书名</th>
                     <th>作者</th>
                     <th>价格</th>
+                    <th>操作</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -92,6 +104,10 @@
                         <td>${book.title}</td>
                         <td>${book.author}</td>
                         <td>¥${book.price}</td>
+                        <td class="action-cell">
+                            <a href="update.jsp?id=${book.id}" class="action-link">修改</a>
+                            <a href="../delete?id=${book.id}" class="action-link" onclick="return confirm('确定要删除这本书吗？')">删除</a>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
