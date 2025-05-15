@@ -70,6 +70,7 @@
         <form action="../query" method="get">
             <button type="submit" class="btn">查询所有书籍</button>
         </form>
+        <a href="change.jsp" class="btn">添加书籍</a>
         <a href="welcome.jsp" class="btn">返回首页</a>
     </div>
 
